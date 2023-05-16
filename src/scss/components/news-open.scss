@@ -1,0 +1,145 @@
+.news_open {
+	@include bp($point_2, min) {
+		padding-top: 11.6rem;
+	}
+
+	article {
+		max-width: 79.3rem;
+		margin: 0 auto;
+
+		@include bp($point_2, min) {
+			padding-top: 3rem;
+		}
+
+		@include bp($point_3) {
+			padding-top: 1.5rem;
+		}
+	}
+
+	img {
+		@include cover_img;
+		max-height: 50rem;
+
+		&:not(:last-child) {
+			@include bp($point_2, min) {
+				margin-bottom: 5.8rem;
+			}
+
+			@include bp($point_3) {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+
+	ul {
+		padding-left: 1.4rem;
+	}
+
+	li {
+		position: relative;
+		line-height: 1.23;
+		letter-spacing: 0.05em;
+
+		&::before {
+			content: '•';
+			position: absolute;
+			left: -1.4rem;
+		}
+
+		&:not(:last-child) {
+			@include bp($point_2, min) {
+				margin-bottom: 3rem;
+			}
+
+			@include bp($point_3) {
+				margin-bottom: 1.5rem;
+			}
+		}
+
+		@include bp($point_2, min) {
+			font-size: 2rem;
+		}
+
+		@include bp($point_3) {
+			font-size: 1.6rem;
+		}
+	}
+
+	p {
+		font-family: $openSans;
+		line-height: 1.87;
+		color: $black;
+
+		@include bp($point_4, min) {
+			font-size: 1.4rem;
+		}
+
+		@include bp($point_4 - 1) {
+			font-size: 1.2rem;
+		}
+	}
+
+	hr {
+		&:not(:last-child) {
+			margin-bottom: 1.9rem;
+		}
+	}
+
+	p {
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+	}
+
+	.circle_btn {
+		@include bp($point_2, min) {
+			margin-bottom: 5rem;
+		}
+
+		@include bp($point_3) {
+			margin-bottom: 2.5rem;
+		}
+	}
+}
+.news_open__date {
+	max-width: 79.3rem;
+	margin: 0 auto;
+
+	font-weight: 300;
+	font-size: 1.4rem;
+	letter-spacing: 0.2em;
+
+	color: $black;
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.news_open__title {
+	max-width: 79.3rem;
+	margin: 0 auto;
+	line-height: 1.62;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+
+	color: $black;
+
+	&:not(:last-child) {
+		@include bp($point_2, min) {
+			margin-bottom: 2.7rem;
+		}
+
+		@include bp($point_3) {
+			margin-bottom: 1.4rem;
+		}
+	}
+
+	@include bp($point_2, min) {
+		font-size: 3.2rem;
+	}
+
+	@include bp($point_3) {
+		font-size: 1.8rem;
+	}
+}

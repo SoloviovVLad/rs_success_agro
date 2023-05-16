@@ -1,0 +1,8 @@
+mixin title(data, logo)
+	.title_block
+		.title_block__wrap
+			if data
+				h3.title_block__title!= data
+			if logo
+				a.title_block__logo_link(href='#')
+					img.title_block__img(src!= `images/${logo}`, alt='logo')

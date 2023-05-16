@@ -1,0 +1,100 @@
+.procent__wrap {
+	max-width: 119.5rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.procent__list {
+	display: flex;
+
+	@include bp($point_1, min) {
+		justify-content: space-between;
+	}
+
+	@include bp($point_1 - 1) {
+		flex-wrap: wrap;
+	}
+
+	@include bp($point_5, min) {
+		margin: 0 -2rem -2rem 0;
+	}
+
+	@include bp($point_5 - 1) {
+		margin: 0 -1rem -1rem 0;
+	}
+}
+
+.procent_item {
+	width: 100%;
+
+	@include bp($point_1 - 1, $point_5) {
+		width: 33.33%;
+	}
+
+	@include bp($point_5, min) {
+		padding: 0 2rem 2rem 0;
+	}
+
+	@include bp($point_5 - 1) {
+		width: 50%;
+		padding: 0 1rem 1rem 0;
+	}
+}
+
+.procent_item__title {
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 0.065em;
+	text-transform: uppercase;
+
+	&:not(:last-child) {
+		@include bp($point_5, min) {
+			margin-bottom: 1.5rem;
+		}
+
+		@include bp($point_5 - 1) {
+			margin-bottom: .5rem;
+		}
+	}
+
+	.procent_item:nth-child(1) & {
+		color: $dark_green;
+	}
+
+	.procent_item:nth-child(2) & {
+		color: $green_2;
+	}
+
+	.procent_item:nth-child(3) & {
+		color: $green_1;
+	}
+
+	.procent_item:nth-child(4) & {
+		color: $green_4;
+	}
+
+	.procent_item:nth-child(5) & {
+		color: $green_3;
+	}
+
+	@include bp($point_5, min) {
+		font-size: 4.6rem;
+	}
+
+	@include bp($point_5 - 1) {
+		font-size: 2.2rem;
+	}
+}
+
+.procent_item__descr {
+	text-align: center;
+	margin: 0 auto;
+
+	@include bp($point_5, min) {
+		max-width: 75%;
+	}
+
+	@include bp($point_5 - 1) {
+		max-width: 90%;
+	}
+}

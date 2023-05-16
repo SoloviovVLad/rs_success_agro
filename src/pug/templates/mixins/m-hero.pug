@@ -1,0 +1,11 @@
+mixin hero(data)
+	section.section.hero
+		.section_in
+			+picture({
+				class: 'hero__img_w',
+				class_img: 'hero__img',
+				img: `images/hero/${data.img}`,
+				alt: 'hero img',
+				media: data.img_media,
+				mob: `images/hero/${data.img_mob}`,
+			})

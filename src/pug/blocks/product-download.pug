@@ -1,0 +1,27 @@
+-
+	list = [
+		'download_1.jpg',
+		'download_2.jpg',
+		'download_3.jpg',
+		'download_4.jpg',
+		'download_5.jpg',
+		'download_6.jpg',
+	]
+section.section.download
+	.section_in
+		.download__wrap
+			.download__slider_w
+				.download_slider.swiper.js-slider-download
+						.download_slider__wrapper.swiper-wrapper
+							each item in list
+								.download_slider__slide.swiper-slide
+									+picture({
+										class: 'download_slider__img_w',
+										class_img: 'download_slider__img',
+										img: `images/slider-download/${item}`,
+										alt: 'certificate img'
+									})
+			a.download__link(href='#')
+				.download__link_icon
+					+icon('download','icon--size_mod')
+				span Скачать PDF

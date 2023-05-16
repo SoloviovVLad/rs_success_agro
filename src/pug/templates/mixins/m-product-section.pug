@@ -1,0 +1,19 @@
+mixin product(data)
+	section.section.product(class= data.mod)
+		.section_in
+			.product__wrap
+				+picture({
+					class: 'product__img_w',
+					class_img: 'product__img',
+					img: `images/products-text/${data.img}`,
+					alt: 'product'
+				})
+				.product__content
+					if data.title
+						h3.product__title.section_title!= data.title
+					if data.subtitle
+						.product__subtitle.section_subtitle!= data.subtitle
+					if data.descr
+						.product__descr.section_descr
+							each item in data.descr
+								p!= item

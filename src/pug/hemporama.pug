@@ -1,0 +1,68 @@
+extends layout/layout
+
+block vars
+	include ./templates/mixins/m-hero
+	include ./templates/mixins/m-title
+	include ./templates/mixins/m-banner-block
+	include ./templates/mixins/m-product-section
+	include ./templates/mixins/m-text-media
+	include ./templates/mixins/m-img-row
+	include ./templates/mixins/m-slider-certificate
+
+	- array = {body_class:'', title_inner:'Hemporama'}
+
+block content_block
+	+hero({
+		img: 'hero_6.jpg'
+	})
+	+banner_block({
+		main_title: 'Торговая марка',
+		main_title_logo: 'hemporama_logo.png',
+		mod: 'banner_block--reverse_mod',
+		img: 'images/banner/banner_12.jpg',
+		subtitle: 'Hemporama® зарегистрирована в самой авторитетной специализированной организации World Intellectual Property Organization, а также в 65 ведущих странах мира, включая все страны Европейского Союза и Великобританию, и представлена на всех континентах мира.',
+	})
+	+text_media({
+		title: 'Наилучшее решение для преодоления глубокой пропасти, возникшей межу человеком и естественной средой, – представленная мировому рынку торговая марка Hemporama®',
+		descr: 'Продукция торговой марки Hemporama® на основе технической конопли призвана гармонизировать две наиболее загрязняющие окружающую среду отрасли – строительную и животноводческую. Hemporama® — это бренд конопляной продукции, представленный товарами для качественного экологичного строительства «на века» и заботы о здоровье сельскохозяйственных животных.',
+	})
+	+banner_block({
+		main_title: 'КОРМОВЫЕ ДОБАВКИ ТОРГОВОЙ МАРКИ HEMPORAMA®',
+		img: 'images/banner/banner_13.jpg',
+		title: 'МИРОМ ЖИВОТНЫХ ПРАВИТ HEMPORAMA®',
+		subtitle: 'Hemporama® — это полноценный рацион при меньших затратах на корм для сельскохозяйственных животных.',
+		descr: 'Позволяет максимально увеличить вес без необходимости использования искусственных стероидов для роста. Кормовые добавки Hemporama® — это гуманный подход к выращиванию сельскохозяйственных животных, создающий баланс между удовлетворением потребностей человека и животных без применения вредных синтетических лекарств. Кормовые добавки торговой марки Hemporama® — это уникальное лакомство-суперфуд, содержащее белки, жиры и естественный витаминный комплекс, дарованный природой. '
+	})
+	+img_row([
+		'img_row_4.jpg',
+		'img_row_5.jpg',
+		'img_row_6.jpg',
+	])
+	+text_media({
+		main_title: 'СТРОИТЕЛЬНЫЕ МАТЕРИАЛЫ ТОРГОВОЙ МАРКИ HEMPORAMA®',
+		subtitle: 'Материалы от торговой марки Hemporama® возрождают экологичное строительство на основе технической конопли.',
+		descr: 'Это экологичная суперпрочная и дышащая альтернатива неприродным и разрушительным для здоровья синтетическим строительным материалам, заменившим традиционное эко-строительство в угоду «революционной» промышленности. </br> Это возобновляемый ресурс, характеризующийся отрицательным углеродным следом. Во время роста технической конопли поглощается больше углекислого газа, чем выделяется при изготовлении из нее строительных материалов. Такие стройматериалы проявляют высокие свойства изоляции и тепловой аккумуляции, обладают паропроницаемостью, являются негорючими, а после сноса здания могут использоваться в качестве удобрения.',
+		img: 'images/text-media/text_media_5.jpg'
+	}, 'text_media--row_mod')
+	+img_row([
+		'img_row_7.jpg',
+		'img_row_8.jpg',
+		'img_row_9.jpg',
+	])
+	+text_media({
+		link: 'HEMPORAMA.CH',
+		video : 'images/hemporama_video.mp4'
+	}, 'text_media--row_mod')
+	+slider_certificate({
+		main_title: 'Лицензия и сертификаты LEODAR®',
+		slides: [
+			'certificate_4',
+			'certificate_10',
+			'certificate_7',
+			'certificate_3',
+			'certificate_6',
+			'certificate_11',
+			'certificate_5',
+			'certificate_2',
+		]
+	})

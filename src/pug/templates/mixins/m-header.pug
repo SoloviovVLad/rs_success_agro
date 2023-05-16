@@ -1,0 +1,81 @@
+-
+	header_nav = [
+		{
+			title: 'О компании',
+			link: './about.html',
+		},
+		{
+			title: 'Инновации',
+			link: './inovation.html',
+			active: 'header_nav__item--active',
+		},
+		{
+			title: 'Тех.линии',
+			link: './technology.html',
+		},
+		{
+			title: 'Leodar',
+			link: './leodar.html',
+		},
+		{
+			title: 'Hemporama',
+			link: './hemporama.html',
+		},
+		{
+			title: 'Leoria',
+			link: './leoria.html',
+		},
+		{
+			title: 'Новости',
+			link: './news.html',
+		},
+		{
+			title: 'Контакты',
+			link: './contacts.html',
+		},
+		{
+			title: 'Углеродные кредиты',
+			link: '#',
+		},
+	]
+
+mixin header
+	header.header
+		.header_in
+			a.header__logo(href='/')
+				+icon('logo', 'icon--size_mod')
+			.header__menu
+				if header_nav
+					nav.header_nav
+						ul.header_nav__list
+							each item in header_nav
+								li.header_nav__item(class!= item.active)
+									a.header_nav__link(href!= item.link)!= item.title
+				.social.header_social
+					ul.social__list
+						each item in social
+							li.social__item
+								a.social__link(href=item.link)
+									.social__icon_w
+										+icon(item.icon, 'icon--size_mod')
+				.header_lang
+					.header_lang__trigger
+						span ru
+					.header_lang__dropdown
+						ul.header_lang__dropdown_list
+							li.header_lang__dropdown_item
+								a.header_lang__dropdown_link(href='#') ru
+							li.header_lang__dropdown_item
+								a.header_lang__dropdown_link(href='#') en
+				.blog_btn.header_blog
+					.blog_btn__bg
+					a.blog_btn__link(href='./blog.html')
+						span блог
+				+picture({
+					class: 'header__img_w',
+					class_img: 'header__img',
+					img: 'images/menu_img.png',
+					alt: 'menu img'
+				})
+			.header_burger.js-header-triger
+				span.header_burger__decor

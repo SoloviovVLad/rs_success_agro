@@ -1,0 +1,33 @@
+
+mixin certificate_full(data)
+	section.section.certificate
+		.section_in
+			if data.main_title
+				+title(data.main_title)
+			.certificate__wrap.certificate__wrap--container_mod
+				if data.text
+					.certificate__content
+						each content in data.text
+							.certificate__content_item
+								p!= content
+				.certificate__wrapper
+					ul.certificate__list.js-certificate-list
+						each item in data.items
+							li.certificate_item.js-certificate-item
+								a.certificate_item__link(href=`images/certificate/${item}.pdf`)
+									img.certificate_item__img.lazy(data-src=`images/certificate_preview/${item}.jpg`, alt="certificate")
+					.certificate_full__buttons
+						.certificate_full__btn.js-certificate-hide
+							+circle_btn({
+								mod: 'circle_btn--prev_mod',
+								top_word: 'come',
+								bottom_word: 'back',
+								btn_prev: true,
+							})
+						.certificate_full__btn.js-certificate-show
+							+circle_btn({
+								mod: 'circle_btn--bg_mod',
+								top_word: 'see',
+								bottom_word: 'all',
+							})
+

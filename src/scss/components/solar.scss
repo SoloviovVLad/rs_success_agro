@@ -1,0 +1,117 @@
+.solar {
+	padding-top: 0;
+	margin-top: -4rem;
+}
+
+.solar__wrap {}
+
+.solar__content {
+	position: relative;
+	margin-left: auto;
+
+	@include bp(1750px, min) {
+		max-width: 73.5%;
+	}
+
+	@include bp($point_1, min) {
+		padding: 4.2rem 0 13.5rem;
+	}
+
+	@include bp($point_1 - 1) {
+		padding: 4.2rem 0 4rem;
+	}
+}
+
+.solar__img_w {
+	display: block;
+	height: 100%;
+
+	@include bp(1750px, min) {
+		width: 53%;
+	}
+
+	@include bp(1749px) {
+		width: 40%;
+	}
+
+	@include bp($point_1, min) {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	@include bp($point_1 - 1, $point_4) {
+		width: 60%;
+		margin-left: auto;
+		margin-bottom: -7.2rem;
+	}
+
+	@include bp($point_4) {
+		width: 100%;
+		margin-bottom: -7.2rem;
+	}
+}
+
+.solar__img {
+	@include contain_img;
+}
+
+.solar__text {
+	color: $black;
+
+	b {
+		font-weight: 700;
+		font-family: $font_1;
+		letter-spacing: 0.065em;
+		text-transform: uppercase;
+
+		color: $dark_green;
+
+		@include bp($point_2, $point_4) {
+			font-size: 4.6rem;
+		}
+
+		@include bp($point_4 - 1) {
+			font-size: 1.6rem;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 3.1rem;
+	}
+
+	@include bp($point_1, min) {
+		margin-left: 3rem;
+		max-width: 35%;
+	}
+
+	@include bp($point_4, min) {
+		font-size: 2rem;
+		line-height: 1.18;
+
+		letter-spacing: 0.05em;
+	}
+
+	@include bp($point_4 - 1) {
+		font-size: 1.2rem;
+		font-family: $openSans;
+		line-height: 1.6;
+	}
+}
+
+.solar__title_w {
+	background-color: $dark_green;
+}
+
+.solar__title {
+	color: $white;
+
+	@include bp($point_1, min) {
+		padding: 3.7rem 5rem 4.8rem 12.5rem;
+		max-width: 49.5%;
+	}
+
+	@include bp($point_1 - 1) {
+		padding: 9.2rem 1.2rem 2.7rem 1.2rem;
+	}
+}

@@ -1,0 +1,176 @@
+.dropdown {
+	&:not(.dropdown--reverse_mod) {
+		@include bp($point_2, min) {
+			padding-left: 15rem;
+		}
+	}
+
+	&.dropdown--reverse_mod {
+		@include bp($point_2, min) {
+			padding-right: 15rem;
+		}
+	}
+
+	padding-top: 7rem;
+}
+
+.dropdown__wrap {
+	position: relative;
+	border: 1px solid $black_1;
+
+	@include bp($point_2, min) {
+		max-width: 111rem;
+		padding-top: 4.4rem;
+	}
+
+	@include bp($point_3) {
+		padding: 10rem 2rem 2rem;
+	}
+
+	.dropdown:not(.dropdown--reverse_mod) & {
+		margin-left: auto;
+
+		@include bp($point_2, min) {
+			padding-left: 16rem;
+			padding-right: 2rem;
+		}
+	}
+
+	.dropdown.dropdown--reverse_mod & {
+		@include bp($point_2, min) {
+			padding-right: 16rem;
+			padding-left: 2rem;
+		}
+	}
+}
+
+.dropdown__title_w {
+	cursor: pointer;
+	@include bp($point_2, min) {
+		display: none;
+	}
+}
+
+.dropdown__icon_w {
+	width: 2rem;
+	height: 1rem;
+
+	margin: 0 auto;
+}
+
+.dropdown__title_w {
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+}
+.dropdown__title {
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+
+	@include bp($point_4, min) {
+		font-size: 2.4rem;
+	}
+
+	@include bp($point_4 - 1) {
+		font-size: 1.6rem;
+	}
+}
+
+.dropdown__img_w {
+	position: absolute;
+
+	display: block;
+	width: 100%;
+	height: max-content;
+	transform: translateY(-50%);
+
+	.dropdown:not(.dropdown--reverse_mod) & {
+		@include bp($point_2, min) {
+			top: 50%;
+			left: -14.3rem;
+		}
+
+		@include bp($point_3) {
+			top: 0;
+			left: -2px;
+		}
+	}
+
+	.dropdown.dropdown--reverse_mod & {
+		@include bp($point_2, min) {
+			top: 50%;
+			right: -14.3rem;
+		}
+
+		@include bp($point_3) {
+			top: 0;
+			left: -2px;
+		}
+	}
+
+	@include bp($point_2, min) {
+		max-width: 28.6rem;
+	}
+
+	@include bp($point_3, $point_4) {
+		max-width: 16rem;
+	}
+
+	@include bp($point_4 - 1) {
+		max-width: 14rem;
+	}
+}
+
+.dropdown__img {
+	display: block;
+	width: 100%;
+	height: max-content;
+}
+
+.dropdown__list {
+	@include bp($point_2, min) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@include bp($point_3) {
+		max-height: 0;
+		height: 100%;
+		overflow: hidden;
+		transition: max-height 1.5s cubic-bezier(0, 1, 0, 1);
+	}
+
+	&.dropdown__list--open_state {
+		transition: max-height 2s ease-in-out;
+		max-height: 1000rem;
+	}
+}
+
+.dropdown_item {
+	&:not(:last-child) {
+		@include bp($point_3) {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	@include bp($point_2, min) {
+		width: 50%;
+		padding: 0 1rem 2.2rem 0;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+	}
+}
+
+.dropdown_item__title {
+	font-weight: 500;
+
+	&:not(:last-child) {
+		margin-bottom: .4rem;
+	}
+}

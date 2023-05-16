@@ -1,0 +1,27 @@
+extends layout/layout
+
+block vars
+	include ./templates/mixins/m-banner-block
+	- array = {body_class:'', title_inner:'Index'}
+
+block content_block
+	include ./blocks/main-hero
+	+banner_block({
+		main_title: 'О компании',
+		img: 'images/banner_gif_2.gif',
+		title: 'RS Success Agro-суперсовременный глобальный биотехнологический индустриальный агрокомплекс',
+		descr: 'Комплекс реализует масштабный проект по выращиванию и глубокой переработке целлюлозосодержащих культур и производству экспортоориентированной продукции c высокотехнологичными характеристиками. Компания входит в состав трансконтинентальной компании Industrial Innovation Group.',
+		btn: true
+	})
+	include ./blocks/info-block
+	include ./blocks/infinity-line
+	include ./blocks/products
+	include ./blocks/bg-block
+	+banner_block({
+		main_title: 'технологические линии',
+		img: 'images/banner/banner_2.jpg',
+		subtitle: 'RS Success Agro – это компания с автоматизированной и роботизированной системой полного цикла, рассчитанной на абсолютно безотходное производство.',
+		descr: 'Гордость компании - инновационные технологические линий по производству пищевого масла, волокон, строительных материалов, кормов для животных и удобрений из технической конопли.',
+		btn: true
+	})
+	include ./blocks/news-list

@@ -1,0 +1,32 @@
+mixin text_img_grid(data)
+	section.section.text_img_grid
+		.section_in
+			if data.main_title
+				+title(data.main_title)
+			.text_img_grid__wrap
+				.text_img_grid__content
+					if data.title
+						h3.text_img_grid__title.section_title!= data.title
+					if data.subtitle
+						.text_img_grid__title.section_subtitle!= data.subtitle
+					if data.text
+						.text_img_grid__descr.section_text
+							each p in data.text
+								p!= p
+					if data.descr
+						.text_img_grid__descr.section_descr
+							each p in data.descr
+									p!= p
+				.text_img_grid__grid
+					each row in data.rows
+						.text_img_grid__grid_row
+							each col in row.col
+								.text_img_grid__grid_col
+									+picture({
+										class: 'text_img_grid__img_w',
+										class_img: 'text_img_grid__img',
+										img: `images/text-img-grid/${col.img}`,
+										alt: 'icon'
+									})
+									if col.text
+										.text_img_grid__grid_text!= col.text

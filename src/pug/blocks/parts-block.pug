@@ -1,0 +1,33 @@
+-
+	list = [
+		{
+			img: 'parts_1.jpg',
+			title: 'Бутылки модели Florentina',
+			descr: 'разработаны в Италии',
+		},
+		{
+			img: 'parts_2.jpg',
+			title: 'Колпачек Torent Dop/T',
+			descr: 'разработан в Испании',
+		},
+		{
+			img: 'parts_3.jpg',
+			title: 'Картонный ящик для бутылок',
+			descr: 'разработан в Италии',
+		},
+	]
+section.section.parts
+	.section_in
+		.parts__wrap
+			ul.parts__list
+				each item in list
+					li.parts_item
+						.parts_item__in
+							+picture({
+								class: 'parts_item__img_w',
+								class_img: 'parts_item__img',
+								img: `images/parts-block/${item.img}`,
+								alt: 'img'
+							})
+							.parts_item__title!= item.title
+							.parts_item__descr.section_descr!= item.descr

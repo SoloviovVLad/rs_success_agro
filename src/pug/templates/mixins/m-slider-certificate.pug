@@ -1,0 +1,32 @@
+mixin slider_certificate(data)
+	section.section.certificate
+		.section_in
+			if data.main_title
+				+title(data.main_title)
+			.certificate__wrap
+				if data.text
+					.certificate__content
+						each content in data.text
+							.certificate__content_item
+								p!= content
+				.certificate_slider
+					.certificate_slider__slider.swiper.js-certificate-slider
+						.certificate_slider__wrapper.swiper-wrapper
+							each item in data.slides
+								.certificate_slider__slide.swiper-slide
+									a.certificate_item__link(href=`images/certificate/${item}.pdf`)
+										+picture({
+											class: 'certificate_slider__img_w',
+											class_img: 'certificate_slider__img',
+											img: `images/certificate_preview/${item}.jpg`,
+											alt: 'certificate img'
+										})
+						.certificate_slider__pagination
+							.swiper-button-prev
+								+circle_btn({
+									mod: 'circle_btn--prev_mod',
+									btn_prev: true,
+								})
+							.swiper-button-next
+								+circle_btn({})
+

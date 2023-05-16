@@ -1,0 +1,108 @@
+.product__wrap {
+	display: flex;
+
+	.product:not(.product--reverse_mod) & {
+		@include bp($point_3) {
+			flex-direction: column;
+		}
+	}
+
+	.product.product--reverse_mod & {
+		@include bp($point_2, min) {
+			flex-direction: row-reverse;
+		}
+
+		@include bp($point_3) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	@include bp($point_2, min) {
+		align-items: center;
+		margin-left: auto;
+	}
+
+	@include bp($point_0, min) {
+		max-width: 80%;
+	}
+}
+
+.product__img_w {
+	position: relative;
+	z-index: 1;
+	display: block;
+	height: 100%;
+
+	@include bp($point_0, min) {
+		// margin-right: -5%;
+	}
+
+	@include bp($point_2, min) {
+		width: 50%;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.product__img {
+	display: block;
+	height: 100%;
+
+	@include bp($point_2, min) {
+		margin-left: auto;
+		width: 100%;
+		max-height: 50rem;
+    object-fit: contain
+	}
+
+	@include bp($point_3) {
+		margin: 0 auto;
+		width: 100%;
+		max-height: 28rem;
+		object-fit: contain;
+	}
+}
+
+.product__content {
+	position: relative;
+	height: 100%;
+
+	@include bp($point_0, min) {
+		max-width: 110rem;
+		padding: 5rem 7rem;
+	}
+
+	@include bp($point_0 - 1, $point_2) {
+		padding: 5rem 7rem;
+	}
+
+	@include bp($point_2, min) {
+		width: 50%;
+	}
+}
+
+.product__title {
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.product__subtitle {
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.product__descr {
+	p {
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+}

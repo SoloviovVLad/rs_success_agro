@@ -1,0 +1,68 @@
+.text_on_img__wrap {
+	position: relative;
+
+	@include bp($point_0, min) {
+		padding: 7.2rem 0 7rem 26.5%;
+		min-height: 73.9rem;
+	}
+
+	@include bp($point_0 - 1, $point_4) {
+		padding: 7rem 3rem;
+		min-height: 40rem;
+	}
+}
+
+.text_on_img__subtitle {
+	&:not(:last-child) {
+		@include bp($point_4, min) {
+			margin-bottom: 5.3rem;
+		}
+
+		@include bp($point_4 - 1) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	@include bp($point_1, min) {
+		max-width: 41%;
+	}
+
+	@include bp($point_4, min) {
+		color: $white;
+	}
+}
+
+.text_on_img__descr {
+	p {
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+	}
+
+	@include bp($point_1, min) {
+		max-width: 48%;
+	}
+
+	@include bp($point_4, min) {
+		color: $white;
+	}
+}
+
+.text_on_img__img_w {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	@include bp($point_4, min) {
+		@include stretch;
+		z-index: -1;
+	}
+
+	@include bp($point_4 - 1) {
+		margin-bottom: 2rem;
+	}
+}
+
+.text_on_img__img {
+	@include cover_img;
+}

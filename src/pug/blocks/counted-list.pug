@@ -1,0 +1,40 @@
+-
+	list = [
+		{
+			count: '01',
+			text: 'Установленные глубинные насосы используют грунтовые воды, что позволяет сохранить наземные водные ресурсы – озера, реки и каналы. За один цикл полива расход воды в 4-6 раз меньше, чем при традиционном поливе.'
+		},
+		{
+			count: '02',
+			text: 'Капельное орошение позволяет дозировано, в нужном количестве подавать воду и микроэлементы непосредственно под корень растения в строго необходимом количестве. Вся система полностью автоматизирована и работает автономно. '
+		},
+		{
+			count: '03',
+			text: 'Такая инновация помогает вернуть земле плодородие, учесть каждую каплю воды, получить экологически чистый урожай и значительно повысить урожайность.'
+		},
+	]
+section.section.counted_list
+	.section_in
+		.counted_list__wrap
+			.counted_list__col
+				.counted_list__col_w
+					+picture({
+						class: 'counted_list__img_w counted_list__img_w--animate',
+						class_img: 'counted_list__img',
+						img: 'images/sputnik.png',
+						alt: 'product img'
+					})
+					+picture({
+						class: 'counted_list__img_w',
+						class_img: 'counted_list__img',
+						img: 'images/field.png',
+						alt: 'product img'
+					})
+			.counted_list__content
+				.counted_list__title_w
+					h3.counted_list__title Для осуществления задачи такого масштаба была организована работа 46 артезианских скважин.
+				ul.counted_list__list
+					each item in list
+						li.counted_list_item
+							.counted_list_item__count!= item.count
+							.counted_list_item__text!= item.text

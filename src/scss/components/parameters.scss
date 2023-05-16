@@ -1,0 +1,103 @@
+.parameters {
+	& .image_grid {
+		&:not(:last-child) {
+			@include bp($point_2, min) {
+				margin-bottom: 6rem;
+			}
+
+			@include bp($point_3) {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+}
+
+.parameters__wrap {
+	position: relative;
+}
+
+.parameters__img_w {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	display: block;
+	width: 100%;
+	height: 100%;
+	max-width: 70rem;
+
+	@include bp($point_3) {
+		display: none;
+	}
+}
+
+.parameters__img {
+	@include contain_img;
+}
+
+.parameters__list {
+	@include bp($point_1, min) {
+		padding-top: 15.9rem;
+	}
+
+	@include bp($point_1 - 1, $point_2) {
+		padding-top: 7rem;
+	}
+
+	@include bp($point_2, min) {
+		max-width: 73.6%;
+		margin-left: auto;
+	}
+}
+
+.parameters__item {
+	position: relative;
+
+	padding-left: 5.6rem;
+
+	letter-spacing: 0.05em;
+	line-height: 1.25;
+
+	&:not(:last-child) {
+		margin-bottom: 2.7rem;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		background-color: $green_3;
+
+		@include bp($point_4, min) {
+			width: 5px;
+			height: 2.6rem;
+		}
+
+		@include bp($point_4 - 1) {
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
+	}
+
+	@include bp($point_2, min) {
+		max-width: 73%;
+	}
+
+	@include bp($point_4, min) {
+		font-size: 2rem;
+	}
+
+	@include bp($point_4 - 1) {
+		padding: 1rem;
+
+		font-family: $openSans;
+		font-size: 1.4rem;
+
+		&::first-letter {
+			text-transform: uppercase;
+		}
+	}
+}

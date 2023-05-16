@@ -1,0 +1,161 @@
+.blog__wrap {
+	max-width: 111rem;
+	margin: 0 auto;
+}
+
+.blog__logo {
+	display: block;
+	width: 7.6rem;
+	height: 6.5rem;
+	margin: 0 auto;
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.blog__logo_img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.blog__title {
+	text-align: center;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+
+	color: $black_1;
+
+	&:not(:last-child) {
+		@include bp($point_4, min) {
+			margin-bottom: 10rem;
+		}
+
+		@include bp($point_4 - 1) {
+			margin-bottom: 5rem;
+		}
+	}
+
+	@include bp($point_4, min) {
+		font-size: 3.2rem;
+	}
+
+	@include bp($point_4 - 1) {
+		max-width: 60%;
+		margin: 0 auto;
+		font-size: 1.6rem;
+	}
+}
+
+.blog__list {
+	display: flex;
+	flex-wrap: wrap;
+
+	@include bp($point_4, min) {
+		margin: 0 -3rem -4rem 0;
+	}
+}
+
+.blog_item {
+	&:not(:nth-child(3n+3)) {
+		@include bp($point_2, min) {
+			width: 50%;
+		}
+	}
+
+	@include bp($point_3, $point_4) {
+		width: 50%;
+	}
+
+	@include bp($point_4, min) {
+		padding: 0 3rem 4rem 0;
+	}
+
+	@include bp($point_4 - 1) {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+}
+
+.blog_item__in {
+	border: 1px solid $black_1;
+
+	.blog_item:nth-child(3n+3) & {
+		@include bp($point_2, min) {
+			display: flex;
+		}
+	}
+}
+
+.blog_item__content {
+	position: relative;
+
+
+	.circle_btn {
+		margin-left: auto;
+
+		@include bp($point_4, min) {
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	.blog_item:nth-child(3n+3) & {
+		@include bp($point_2, min) {
+			width: 30%;
+		}
+	}
+
+	@include bp($point_4, min) {
+		padding: 3rem 2rem;
+	}
+
+	@include bp($point_4 - 1) {
+		padding: 1.5rem 1rem;
+	}
+}
+
+.blog_item__img_w {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	.blog_item:nth-child(3n+3) &{
+		@include bp($point_2, min) {
+			width: 70%;
+		}
+	}
+}
+
+.blog_item__img {
+	@include cover_img;
+
+	.blog_item:nth-child(3n+3) &{
+		max-height: inherit;
+	}
+
+	.blog_item:not(:nth-child(3n+3)) &{
+		max-height: 35rem;
+	}
+}
+
+.blog_item__date {
+	position: absolute;
+	bottom: 3rem;
+	left: 2rem;
+	font-weight: 300;
+	font-size: 1.4rem;
+	letter-spacing: 0.2em;
+
+	color: $black;
+
+	@include bp($point_4 - 1) {
+		display: none;
+	}
+}
+
+.blog_item__title {
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+

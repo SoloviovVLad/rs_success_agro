@@ -1,0 +1,30 @@
+mixin news_item(data)
+	.news_item
+		.news_item__in
+			if data.date
+				.news_item__date_w
+					.news_item__date!= data.date
+			if data.img
+				a.news_item__img_link(href="#")
+					+picture({
+						class: 'news_item__img_w',
+						class_img: 'news_item__img',
+						img: data.img,
+						alt: 'news img'
+					})
+			.news_item__content
+				if data.title
+					.news_item__title!= data.title
+				if data.descr
+					.news_item__descr!= data.descr
+				.news_item__btn_w
+					+circle_btn({
+						top_word: 'read',
+						bottom_word: 'more'
+					})
+					if data.btn_see_all
+						+circle_btn({
+							mod: 'circle_btn--bg_mod',
+							top_word: 'see',
+							bottom_word: 'all'
+						})

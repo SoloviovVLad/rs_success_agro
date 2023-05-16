@@ -1,0 +1,22 @@
+section.section.contact
+	.section_in
+		.contact__wrap
+			.contact__content
+				.contact__content_in
+					.contact__subtitle.section_subtitle Биотехнологический индустриальный агрокомплекс RS SUCCESS AGRO
+					.contact__descr.section_descr ул. Леодар,МСГ Узбекистан тукинчилиги, Хавастский район, Сырдарьинская область, Республика Узбекистан
+			form.contact_form(action="#")
+				div
+					label(for="input_name") Name
+						input#input_name(type="text" placeholder='Name')
+					label(for="input_phone") Phone
+						input#input_name(type="text" placeholder='Phone')
+					label(for="input_name") E-mail
+						input#input_name(type="email" placeholder='E-mail')
+				div
+					label(for="input_message") Message
+						textarea#input_message(placeholder='Message')
+					button(type='submit')
+						+circle_btn({
+
+						})

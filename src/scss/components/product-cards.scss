@@ -1,0 +1,161 @@
+.products {
+	@include bp($point_3) {
+		padding: 3rem var(--gl-indent);
+	}
+}
+
+.products__wrap {
+	height: 100%;
+
+	@include bp($point_1, min) {
+		display: flex;
+	}
+}
+
+.products_item {
+	position: relative;
+
+	overflow: hidden;
+
+	&:not(:last-child) {
+		@include bp($point_1 - 1, $point_4) {
+			padding-bottom: 5rem;
+			margin-bottom: 2rem;
+
+			border-bottom: 1px solid $black_1;
+		}
+
+		@include bp($point_4 - 1) {
+			padding-bottom: 2rem;
+			margin-bottom: 2rem;
+
+			border-bottom: 1px solid $black_1;
+		}
+	}
+
+	@include bp($point_0, min) {
+		width: 33.33%;
+		min-height: 80rem;
+		padding: 4rem 2rem;
+	}
+
+	@include bp($point_0 - 1, $point_1) {
+		width: 33.33%;
+		min-height: 73.9rem;
+		padding: 3rem 2rem;
+	}
+
+	@include bp($point_1 - 1) {
+		display: flex;
+		flex-direction: column;
+
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.products_item__in {
+	position: relative;
+	z-index: 10;
+
+	display: flex;
+	justify-content: center;
+
+	@include bp($point_1 - 1) {
+		min-height: 9rem;
+		margin-bottom: 2rem;
+
+		order: 1;
+	}
+}
+
+.products_item__img_w {
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: transform .5s ease;
+
+	&:not(:last-child) {
+		@include bp($point_4 - 1) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	@include bp($point_1, min) {
+		@include stretch;
+	}
+
+	@include bp($point_1 - 1) {
+		order: 2;
+	}
+}
+
+.products_item__img {
+	@include cover_img;
+
+	@include bp($point_1 - 1, $point_4) {
+		max-height: 67rem;
+	}
+
+	@include bp($point_4 - 1) {
+		max-height: 27rem;
+	}
+}
+
+.products_item__logo_w {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	@include bp($point_1, min) {
+		max-width: 38%;
+	}
+
+	@include bp($point_1 - 1) {
+		max-width: max-content;
+	}
+}
+
+.products_item__logo {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.products_item__btn {
+	z-index: 15;
+
+	& .circle_btn:last-child {
+		@include bp($point_1, min) {
+			display: none;
+		}
+	}
+
+	& .circle_btn:first-child {
+		@include bp($point_1 - 1) {
+			display: none;
+		}
+	}
+
+	&:hover {
+		& + .products_item__img_w {
+			transform: scale(1.1);
+		}
+	}
+
+	@include bp($point_1, min) {
+		position: absolute;
+		top: 1vw;
+		right: 1vw;
+	}
+
+	@include bp($point_1 - 1, $point_4) {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	@include bp($point_4 - 1) {
+		order: 3;
+	}
+}

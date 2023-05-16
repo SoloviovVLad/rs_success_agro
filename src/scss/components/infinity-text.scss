@@ -1,0 +1,35 @@
+.infinity_text {
+	& .section_in {
+		max-width: 100%;
+	}
+
+	@include bp($point_2, min) {
+		padding: 4rem 0;
+	}
+
+	@include bp($point_3) {
+		padding: 2rem 0;
+	}
+}
+
+.infinity_text__wrap {
+	display: flex;
+}
+.infinity_text__line {
+	flex-shrink: 0;
+	font-weight: 700;
+	letter-spacing: 0.155em;
+	text-transform: uppercase;
+
+	color: #6C6B6B;
+
+	padding:0 2rem;
+
+	@include bp($point_2, min) {
+		font-size: 2rem;
+	}
+
+	@include bp($point_3) {
+		font-size: 1.4rem;
+	}
+}

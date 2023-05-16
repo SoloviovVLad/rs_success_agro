@@ -1,0 +1,147 @@
+.text_img_grid__wrap {
+	@include bp($point_0, min) {
+		display: flex;
+		align-items: flex-start;
+	}
+}
+
+.text_img_grid__content {
+	@include bp($point_0, min) {
+		margin-right: 4%;
+		width: 34%;
+	}
+
+	@include bp($point_0 - 1) {
+		margin-bottom: 1.4rem;
+	}
+}
+
+.text_img_grid__title {
+	&:not(:last-child) {
+		@include bp($point_0, min) {
+			margin-bottom: 2.7rem;
+		}
+
+		@include bp($point_0 - 1) {
+			margin-bottom: 1.3rem;
+		}
+	}
+}
+
+.text_img_grid__descr {
+	p {
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.text_img_grid__grid {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	@include bp($point_0, min) {
+		border: 1px solid $black_1;
+	}
+}
+
+.text_img_grid__grid_row {
+	height: 100%;
+
+	&:not(:last-child) {
+		@include bp($point_0, min) {
+			border-bottom: 1px solid $black_1;
+		}
+	}
+
+	&:not(:first-child) {
+		@include bp($point_0 - 1) {
+			display: none;
+		}
+	}
+
+	&:last-child {
+		max-height: 50%;
+	}
+
+ 	@include bp($point_0, min) {
+		display: flex;
+	}
+}
+
+.text_img_grid__grid_col {
+	.text_img_grid__grid_row:first-child & {
+		&:nth-child(1) {
+			@include bp($point_0, min) {
+				border-right: 1px solid $black_1;
+				width: 57.5%;
+			}
+		}
+
+		&:nth-child(2) {
+			@include bp($point_0, min) {
+				width: 42.5%;
+			}
+		}
+	}
+
+	.text_img_grid__grid_row:not(:first-child) & {
+		&:nth-child(1) {
+			width: 42.5%;
+			border-right: 1px solid $black_1;
+		}
+
+		&:nth-child(2) {
+			width: 57.5%;
+		}
+	}
+
+	@include bp($point_0, min) {
+		padding: 3rem;
+	}
+}
+
+.text_img_grid__img_w {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	.text_img_grid__grid_col:last-child & {
+		@include bp($point_0 - 1) {
+			display: none;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+		@include bp($point_0, min) {
+			max-height: 88%;
+		}
+	}
+}
+
+.text_img_grid__img {
+	@include cover_img;
+
+	@include bp($point_0 - 1) {
+		max-height: 30rem;
+	}
+}
+
+.text_img_grid__grid_text {
+	font-family: $openSans;
+	line-height: 1.87;
+
+	@include bp($point_0, min) {
+		font-size: 1.2rem;
+	}
+
+	@include bp($point_0, $point_4) {
+		font-size: 1.4rem;
+	}
+
+	@include bp($point_4 - 1) {
+		font-size: 1.2rem;
+	}
+}

@@ -1,0 +1,27 @@
+include ./m-title
+
+mixin large_img(data)
+	section.section.large_img(class!= data.mod)
+		.section_in
+			if data.main_title
+				+title(data.main_title)
+			.large_img__wrap
+				.large_img__content
+					if data.title
+						h3.large_img__title.section_title!= data.title
+					if data.subtitle
+						.large_img__subtitle.section_subtitle!= data.subtitle
+					if data.descr
+						.large_img__descr.section_descr!= data.descr
+					if data.btn
+						+circle_btn({
+							top_word: 'read',
+							bottom_word: 'more'
+						})
+				if data.img
+					+picture({
+						class: 'large_img__img_w',
+						class_img: 'large_img__img',
+						img: data.img,
+						alt: 'banner img'
+					})

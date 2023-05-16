@@ -1,0 +1,12 @@
+mixin image_grid(data)
+	.image_grid
+		.image_grid__row
+			each item in data
+				.image_grid__col
+					each img in item.img
+						+picture({
+							class: 'image_grid__img_w',
+							class_img: 'image_grid__img',
+							img: `images/image-grid/${img}`,
+							alt: 'icon'
+						})

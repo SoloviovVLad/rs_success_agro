@@ -1,0 +1,30 @@
+include ./m-title
+
+mixin large_news(data)
+	section.section.large_news(class!= data.mod)
+		.section_in
+			if data.main_title
+				+title(data.main_title)
+			.large_news__wrap
+				if data.img
+					+picture({
+						class: 'large_news__img_w',
+						class_img: 'large_news__img',
+						img: `images/news/${data.img}`,
+						alt: 'news img'
+					})
+				.large_news__content
+					if data.date
+						.large_news__date!= data.date
+					if data.title
+						h3.large_news__title.section_title!= data.title
+					if data.subtitle
+						.large_news__subtitle.section_subtitle!= data.subtitle
+					if data.descr
+						.large_news__descr.section_descr!= data.descr
+					if data.btn
+						+circle_btn({
+							top_word: 'read',
+							bottom_word: 'more'
+						})
+

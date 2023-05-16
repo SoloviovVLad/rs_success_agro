@@ -1,0 +1,44 @@
+-
+	info = [
+		{
+			title: '111.703',
+			sub: 'кв.м',
+			subtitle: 'полей',
+			img: 'images/info/info_1.jpg'
+		},
+		{
+			title: '52',
+			subtitle: 'артезианских скважин',
+			img: 'images/info/info_2.jpg'
+		},
+		{
+			title: '5 000',
+			sub: 'га',
+			subtitle: 'система подземного капельного орошения',
+			img: 'images/info/info_3.jpg'
+		},
+		{
+			title: '108',
+			subtitle: 'установок, транспортных средств и навесного оборудования в эксплуатации',
+			img: 'images/info/info_4.jpg'
+		},
+	]
+section.section.info
+	.section_in
+		.info__wrap
+			each item in info
+				.info_item
+					if item.img
+						+picture({
+							class: 'info_item__img_w',
+							class_img: 'info_item__img',
+							img: item.img,
+							alt: 'info img'
+						})
+					.info_item__title_w
+						if item.title
+							h3.info_item__title!= item.title
+						if item.sub
+							span.info_item__title_sub!= item.sub
+					if item.subtitle
+						.info_item__subtitle!= item.subtitle

@@ -1,0 +1,154 @@
+.counted_list__wrap {
+	display: flex;
+
+	@include bp($point_0, min) {
+		border: 1px solid $black_1;
+	}
+}
+
+.counted_list__col {
+	display: flex;
+	width: 26.5%;
+	flex-shrink: 0;
+
+	border-right: 1px solid $black_1;
+
+	@include bp($point_0 - 1) {
+		display: none;
+	}
+}
+
+.counted_list__col_w {
+	position: relative;
+
+	max-height: 57.3rem;
+	margin: auto 0 22.2% calc(-1 * var(--gl-indent));
+}
+
+.counted_list__img_w {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	&:not(.counted_list__img_w--animate) {
+		max-width: 60.4rem;
+	}
+
+	&.counted_list__img_w--animate {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		max-width: 17.7rem;
+    max-height: 17.9rem;
+	}
+}
+
+.counted_list__img {
+	@include contain_img;
+}
+
+.counted_list__title_w {
+	@include bp($point_2, min) {
+		border-bottom: 1px solid $black_1;
+	}
+}
+
+.counted_list__title {
+	position: relative;
+
+	font-weight: 700;
+	text-transform: uppercase;
+
+	color: $black;
+
+	@include bp($point_0, min) {
+		padding: 5.1rem 9.4rem 4rem;
+		max-width: 70%;
+	}
+
+	@include bp($point_0 - 1) {
+		padding-bottom: 1rem;
+	}
+
+	@include bp($point_2, min) {
+		font-size: 3.2rem;
+		letter-spacing: 0.05em;
+		line-height: 1.62;
+	}
+
+	@include bp($point_3, $point_4) {
+		font-size: 2.2rem;
+		letter-spacing: 0.05em;
+		line-height: 1.62;
+	}
+
+	@include bp($point_4 - 1) {
+		font-size: 1.6rem;
+		letter-spacing: 0.036em;
+		line-height: 1.25;
+	}
+}
+
+.counted_list__list {
+	@include bp($point_0, min) {
+		padding-left: 9.4rem;
+	}
+}
+
+.counted_list_item {
+	display: flex;
+
+	&:not(:last-child) {
+		border-bottom: 1px solid $black_1;
+	}
+
+	@include bp($point_0, min) {
+		padding: 6rem 0 4.5rem;
+	}
+
+	@include bp($point_0 - 1) {
+		padding: 2rem 0;
+	}
+}
+
+.counted_list_item__count {
+	min-width: 7.6rem;
+
+	font-size: 6rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	-webkit-text-stroke: 1px $green_3;
+
+	color: transparent;
+
+	@include bp($point_2, min) {
+		margin-right: 5.7rem;
+	}
+
+	@include bp($point_3) {
+		line-height: 1;
+		margin-right: .9rem;
+	}
+}
+
+.counted_list_item__text {
+	font-family: $openSans;
+
+	color: $black;
+
+	@include bp($point_2, min) {
+		max-width: 51%;
+		line-height: 1.87;
+	}
+
+	@include bp($point_4, min) {
+		font-size: 1.4rem;
+	}
+
+	@include bp($point_4 - 1) {
+		line-height: 1.67;
+		font-size: 1.2rem;
+	}
+}

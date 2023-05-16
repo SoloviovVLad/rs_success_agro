@@ -1,0 +1,15 @@
+mixin text_on_img(data)
+	section.section.text_on_img
+		.section_in
+			.text_on_img__wrap
+				.text_on_img__subtitle.section_subtitle!=	data.subtitle
+				+picture({
+					class: 'text_on_img__img_w',
+					class_img: 'text_on_img__img',
+					img: `images/${data.img}`,
+					alt: 'certificate img'
+				})
+				.text_on_img__descr.section_descr
+					each item in data.descr
+						p!= item
+

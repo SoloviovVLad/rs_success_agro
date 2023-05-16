@@ -1,0 +1,42 @@
+-
+	list = [
+		{
+			img: 'news_1.jpg',
+			title: 'Industrial Innovation Group и Moser создали премиальную хрустальную бутылку для бренда Leodar® с инкрустацией никелевой голограммой и драгоценным камнем  морион ',
+			date: 'ОАЭ,Чехия, март 2021'
+		},
+		{
+			img: 'news_2.jpg',
+			title: 'Industrial Innovation Group и Moser создали премиальную хрустальную бутылку для бренда Leodar® с инкрустацией никелевой голограммой и драгоценным камнем  морион ',
+			date: 'ОАЭ,Чехия, март 2021'
+		},
+		{
+			img: 'news_3.jpg',
+			title: 'Industrial Innovation Group и Moser создали премиальную хрустальную бутылку для бренда Leodar® с инкрустацией никелевой голограммой и драгоценным камнем  морион ',
+			date: 'ОАЭ,Чехия, март 2021'
+		},
+	]
+
+section.section.blog
+	.section_in
+		.blog__wrap
+			a.blog__logo(href='/')
+				img.blog__logo_img(src="images/logo.png", alt="logo")
+			h2.blog__title Добро пожаловать в наш блог
+			ul.blog__list
+				each item in list
+					li.blog_item
+						.blog_item__in
+							+picture({
+								class: 'blog_item__img_w',
+								class_img: 'blog_item__img',
+								img: `images/news/${item.img}`,
+								alt: 'blog img'
+							})
+							.blog_item__content
+								.blog_item__date!= item.date
+								.blog_item__title.section_text!= item.title
+								+circle_btn({
+									top_word: 'read',
+									bottom_word: 'more'
+								})

@@ -1,0 +1,47 @@
+-
+	items = [
+		{
+			img: 'images/products/product_1.jpg',
+			logo: 'images/products/product_logo_1.png',
+			mod: 'circle_btn--white_mod'
+		},
+		{
+			img: 'images/products/product_2.jpg',
+			logo: 'images/products/product_logo_2.png',
+			mod: 'circle_btn--white_mod'
+		},
+		{
+			img: 'images/products/product_3.jpg',
+			logo: 'images/products/product_logo_3.png',
+			mod: 'circle_btn--white_mod'
+		},
+	]
+section.section.products
+	.section_in
+		.products__wrap
+			each item in items
+				.products_item
+					.products_item__btn
+						+circle_btn({
+							mod: item.mod,
+							top_word: 'read',
+							bottom_word: 'more'
+						})
+						+circle_btn({
+							top_word: 'read',
+							bottom_word: 'more'
+						})
+					+picture({
+						class: 'products_item__img_w',
+						class_img: 'products_item__img',
+						img: item.img,
+						alt: 'product img'
+					})
+					.products_item__in
+						+picture({
+							class: 'products_item__logo_w',
+							class_img: 'products_item__logo',
+							img: item.logo,
+							alt: 'product img'
+						})
+

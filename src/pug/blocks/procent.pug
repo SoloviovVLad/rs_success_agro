@@ -1,0 +1,32 @@
+-
+	list = [
+		{
+			title: '65%',
+			descr: 'Углекислый газ (ископаемое топливо и промышленность)'
+		},
+		{
+			title: '11%',
+			descr: 'Углекислый газ (лесное хозяйство и другое землепользование)'
+		},
+		{
+			title: '16%',
+			descr: 'Метан'
+		},
+		{
+			title: '6%',
+			descr: 'Оксид азота'
+		},
+		{
+			title: '2%',
+			descr: 'Фторированные газы'
+		},
+	]
+
+section.section.procent
+	.section_in
+		.procent__wrap
+			ul.procent__list
+				each item in list
+					li.procent_item
+						.procent_item__title!= item.title
+						.procent_item__descr.section_descr!= item.descr

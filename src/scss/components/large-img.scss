@@ -1,0 +1,62 @@
+.large_img__wrap {
+	position: relative;
+
+	display: flex;
+
+	&::before {
+		@include stretch;
+		width: 100%;
+		height: 100%;
+		border: 1px solid $black_1;
+
+		@include bp($point_2, min) {
+			content: '';
+		}
+	}
+
+	@include bp($point_3) {
+		flex-direction: column;
+	}
+}
+
+.large_img__content {
+	@include bp($point_2, min) {
+		padding: 3.7rem 3rem 3.7rem 6.2rem;
+		width: 100%;
+		max-width: 44.6rem;
+		flex-shrink: 0;
+	}
+
+	@include bp($point_3) {
+		margin-bottom: 1.4rem;
+	}
+}
+
+.large_img__title {
+	&:not(:last-child) {
+		@include bp($point_4, min) {
+			margin-bottom: 2.3rem;
+
+		}
+
+		@include bp($point_4) {
+			margin-bottom: 1.2rem;
+		}
+	}
+}
+
+.large_img__img_w {
+	position: relative;
+	z-index: 10;
+
+	display: block;
+	height: inherit;
+
+	@include bp($point_2, min) {
+		width: 75%;
+	}
+}
+
+.large_img__img {
+	@include cover_img;
+}

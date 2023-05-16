@@ -1,0 +1,35 @@
+import documentReady from './helpers/documentReady';
+import viewHeight from './helpers/viewHeight';
+import lazyImages from './modules/lazyImages';
+import certificateSlider from './components/certificate-slider';
+import sputnik from './components/counted-list';
+import goalCircle from './components/goals-circle';
+import grow from './components/grow';
+import header from './components/header';
+import infinityLine from './components/infinity-line';
+import sliderText from './components/slider-text';
+import infinityText from './components/infinity-text';
+import animateProduct from './components/animate-product';
+import dropdown from './components/dropdown';
+import sliderDownload from './components/slider-download';
+import videoPlay from './components/videoPlay';
+import certificateAll from './components/certificate-all';
+
+documentReady(() => {
+	// console.log('Document is ready');
+	viewHeight();
+	lazyImages();
+	header();
+	infinityLine();
+	goalCircle();
+	certificateSlider();
+	grow();
+	sputnik();
+	sliderText();
+	infinityText();
+	animateProduct();
+	dropdown();
+	sliderDownload();
+	videoPlay();
+	certificateAll();
+});

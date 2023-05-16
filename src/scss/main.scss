@@ -1,0 +1,50 @@
+@import './helpers/helpers-all';
+
+@import './base/base';
+
+@import './layout/layout';
+
+//plugins
+
+@import '../../node_modules/swiper/swiper.scss';
+
+// components
+
+@import './components/main-hero.scss';
+@import './components/banner-block.scss';
+@import './components/info-block.scss';
+@import './components/infinity-line.scss';
+@import './components/infinity-text.scss';
+@import './components/product-cards.scss';
+@import './components/product-section.scss';
+@import './components/bg-block.scss';
+@import './components/news-list.scss';
+@import './components/news-item.scss';
+@import './components/hero.scss';
+@import './components/text-media.scss';
+@import './components/goals.scss';
+@import './components/items-icons.scss';
+@import './components/image-grid.scss';
+@import './components/parameters.scss';
+@import './components/certificate.scss';
+@import './components/grow.scss';
+@import './components/counted-list.scss';
+@import './components/large-img.scss';
+@import './components/solar.scss';
+@import './components/text-img-grid.scss';
+@import './components/slider-text.scss';
+@import './components/text-on-img.scss';
+@import './components/icons-title.scss';
+@import './components/news-open.scss';
+@import './components/animate-product.scss';
+@import './components/img-row.scss';
+@import './components/dropdown.scss';
+@import './components/parts-block.scss';
+@import './components/product-download.scss';
+@import './components/contact.scss';
+@import './components/blog-list.scss';
+@import './components/color-block.scss';
+@import './components/procent.scss';
+@import './components/article.scss';
+@import './components/large-news.scss';
+

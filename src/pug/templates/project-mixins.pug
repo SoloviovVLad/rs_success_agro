@@ -1,0 +1,12 @@
+mixin circle_btn(data)
+	a.circle_btn(class= data.mod, href='#')
+		.circle_btn__in
+			span!= data.top_word
+			.circle_btn__icon_w
+				if data.btn_prev
+					.circle_btn__icon
+						+icon('arrow_btn_prev','icon--size_mod')
+				else
+					.circle_btn__icon
+						+icon('arrow_btn_next','icon--size_mod')
+			span!= data.bottom_word

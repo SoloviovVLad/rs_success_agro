@@ -1,0 +1,17 @@
+mixin icons_title(data)
+	section.section.icons_title
+		.section_in
+			ul.icons_title__list
+				each item in data
+					li.icons_title_item
+						+picture({
+							class: 'icons_title_item__img_w',
+							class_img: 'icons_title_item__img',
+							img: `images/icons-title/${item.img}`,
+							alt: 'icon'
+						})
+						.icons_title_item__content
+							if item.title
+								h3.icons_title_item__title!= item.title
+							if item.descr
+								.icons_title_item__descr!= item.descr

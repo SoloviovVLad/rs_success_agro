@@ -1,0 +1,36 @@
+mixin text_media(data, mod)
+	section.section.text_media(class!= mod)
+		.section_in
+			if data.main_title
+				+title(data.main_title, data.main_title_logo)
+			.text_media__wrap
+				if data.title || data.subtitle || data.descr || data.link
+					.text_media__content
+						if data.title
+							h3.text_media__title!= data.title
+						if data.subtitle
+							h3.text_media__subtitle!= data.subtitle
+						if data.descr
+							.text_media__descr.section_descr!= data.descr
+						if data.link
+							a.text_media__link(href='https://leodar.com')
+								.text_media__link_icon
+									+icon('link', 'icon--size_mod')
+								span!= data.link
+				if data.img || data.video
+					.text_media__media
+						if data.img
+							+picture({
+								class: 'text_media__img_w',
+								class_img: 'text_media__img',
+								img: data.img,
+								alt: 'img'
+							})
+						if data.video
+							.text_media__video
+								video.text_media__video(src!=data.video, loop muted)
+						if data.on_media_img || data.on_media_text
+							.text_media__on_media_w
+								if data.on_media_img
+									img.text_media__on_media_img(src=`/images/${data.on_media_img}`, alt='logo')
+								.text_media__on_media_text.section_descr!= data.on_media_text

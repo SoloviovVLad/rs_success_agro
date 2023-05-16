@@ -1,0 +1,35 @@
+-
+	list = [
+		{
+			main_title: 'ВИЗИЯ',
+			title: 'Быть лидером в коноплеводстве',
+			descr: 'Cтать главным поставщиком экологически чистой продукции из технической конопли на мировой рынок как здоровой и уникальной по составу альтернативы привычным продуктам, сохраняя бережное отношение к природным ресурсам.',
+		},
+		{
+			main_title: 'Миссия',
+			title: 'Возродить вековые традиции коноплеводства',
+			descr: 'Ускорить переход человечества к использованию экологически безопасных продуктов из технической конопли.',
+		},
+		{
+			main_title: 'ЦЕННОСТИ',
+			title: 'Наши ценности – основа устойчивого развития',
+			descr: 'Воплощение стремлений глобального биотехнологического комплекса RS Success Agro стать мировым лидером, надежным партнером и главным центром инноваций в агросфере с акцентом на «зеленое производство».',
+		},
+	]
+section.section.goals
+	.section_in
+		+picture({
+			class: 'goals__img_w js-goal-circle',
+			class_img: 'goals__img',
+			img: 'images/goals_circle.png',
+			alt: 'goals img'
+		})
+		.goals__list
+			each item in list
+				.goals_item
+					+title(item.main_title)
+					.goals_item__content
+						if item.title
+							h3.goals_item__title!= item.title
+						if item.descr
+							.goals_item__descr!= item.descr

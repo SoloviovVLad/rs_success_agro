@@ -1,0 +1,90 @@
+.goals__img_w {
+	position: absolute;
+	top: 0;
+	right: 10%;
+	z-index: 10;
+
+	@include bp($point_2, min) {
+		width: 30vw;
+		height: 30vw;
+	}
+
+	@include bp($point_3) {
+		width: 20rem;
+		height: 20rem;
+	}
+}
+
+.goals__img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.goals_item {
+	& .title_block {
+		@include bp($point_2, min) {
+			padding-bottom: 2.7rem;
+		}
+	}
+
+	&:not(:last-child) {
+		@include bp($point_2, min) {
+			margin-bottom: 6rem;
+		}
+
+		@include bp($point_3) {
+			margin-bottom: 2.6rem;
+		}
+	}
+}
+.goals_item__content {
+
+	@include bp($point_2, min) {
+		max-width: 73.5%;
+		margin-left: auto;
+	}
+}
+
+.goals_item__title {
+	color: $black;
+
+	&:not(:last-child) {
+		@include bp($point_2, min) {
+			margin-bottom: 1.5rem;
+		}
+
+		@include bp($point_3) {
+			margin-bottom: 1.1rem;
+		}
+	}
+
+	@include bp($point_2, min) {
+		font-size: 2rem;
+		font-weight: 400;
+		letter-spacing: .05em;
+	}
+
+	@include bp($point_3) {
+		font-size: 1.6rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: .04em;
+	}
+}
+
+.goals_item__descr {
+	font-family: $openSans;
+
+	color: $black;
+
+	@include bp($point_2, min) {
+		font-size: 1.4rem;
+		line-height: 1.87;
+	}
+
+	@include bp($point_3) {
+		font-size: 1.2rem;
+		line-height: 1.7;
+	}
+}

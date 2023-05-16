@@ -1,0 +1,15 @@
+extends layout/layout
+
+block vars
+	include ./templates/mixins/m-hero
+	include ./templates/mixins/m-title
+
+	- array = {body_class:'', title_inner:'Contacts'}
+
+block content_block
+	+hero({
+		img: 'hero_7.jpg',
+		img_media: 480,
+		img_mob: 'hero_7_mob.jpg'
+	})
+	include ./blocks/contact

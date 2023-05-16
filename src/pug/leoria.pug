@@ -1,0 +1,51 @@
+extends layout/layout
+
+block vars
+	include ./templates/mixins/m-hero
+	include ./templates/mixins/m-title
+	include ./templates/mixins/m-banner-block
+	include ./templates/mixins/m-product-section
+	include ./templates/mixins/m-text-media
+	include ./templates/mixins/m-slider-certificate
+
+	- array = {body_class:'', title_inner:'Leoria'}
+
+block content_block
+	+hero({
+		img: 'hero_5.jpg',
+		img_media: 480,
+		img_mob: 'hero_5_mob.jpg'
+	})
+	+banner_block({
+		main_title: 'Торговая марка',
+		main_title_logo: 'leoria_logo.png',
+		img: 'images/banner/banner_11.jpg',
+		title: 'ПРИРОДНАЯ КРАСОТА В ОТРАЖЕНИИ ЗЕРКАЛА',
+		subtitle: 'Торгова марка Leoria® представляет натуральные косметические и уходовые средства для лица, тела и волос, подчеркивающие внешнее проявление внутренней красоты человека. ',
+		descr: 'Масло семян конопли как главный компонент косметики Leoria® содержит 8 незаменимых жирных кислот, богато аминокислотами и витаминами A, В, С, E. В косметологии масло конопли ценится не только за богатый состав, но и за высокую проникающую способность: все полезные составляющие не скапливаются на поверхности эпидермиса, а проникают до более глубоких слоев. Leoria® оказывает мультифункциональный эффект, решая проблемы возрастных изменений, сухости, обезвоженности, воспалений, высыпаний, псориаза, зуда и дискомфорта кожи, акне и постакне, а также проблемы кожи головы и волос.'
+	})
+	+product({
+		mod:'product--reverse_mod',
+		img: 'product_4.png',
+		title: 'Энергия вкуса чая Hemp Emerald Tea® впечатляет с первого мгновения.',
+		descr: [
+			'Игривый и переливчатый коктейль из питательных веществ, витаминов и микроэлементов с чувственным аккордом миндаля в обрамлении наполненной солнцем зелени пользуется почтением у истинных ценителей чая.',
+		]
+	})
+	+text_media({
+		subtitle: 'Соответствующая наивысшим стандартам в сфере производства натуральной косметики, торговая марка Leoria® уже зарегистрирована в 46 странах мира на различных континентах. ',
+		video: 'images/leoria.mov'
+	}, 'text_media--row_mod text_media--reverse_mod')
+	+slider_certificate({
+		main_title: 'Лицензия и сертификаты LEODAR®',
+		slides: [
+			'certificate_4',
+			'certificate_10',
+			'certificate_7',
+			'certificate_3',
+			'certificate_6',
+			'certificate_11',
+			'certificate_5',
+			'certificate_2',
+		]
+	})

@@ -1,0 +1,89 @@
+-
+	footer_nav = [
+		{
+			title: 'О компании',
+			link: './about.html',
+		},
+		{
+			title: 'Инновации',
+			link: './inovation.html',
+			active: 'footer_nav__item--active',
+		},
+		{
+			title: 'Тех.линии',
+			link: '#',
+		},
+		{
+			title: 'Leodar',
+			link: '#',
+		},
+		{
+			title: 'Hemporama',
+			link: '#',
+		},
+		{
+			title: 'Leoria',
+			link: '#',
+		},
+		{
+			title: 'Новости',
+			link: '#',
+		},
+		{
+			title: 'Контакты',
+			link: '#',
+		},
+		{
+			title: 'Блог',
+			link: '#',
+		},
+		{
+			title: 'Углеродные кредиты',
+			link: '#',
+		},
+	]
+	social = [
+		{
+			icon: 'facebook',
+			link: '#'
+		},
+		{
+			icon: 'youtube',
+			link: '#'
+		},
+		{
+			icon: 'instagram',
+			link: '#'
+		}
+	]
+mixin footer
+	footer.footer
+		.footer_in
+			.footer__wrap
+				.footer__title_w
+					h1.footer__title RS SUCCESS AGRO
+				if footer_nav
+					nav.footer_nav
+						ul.footer_nav__list
+							each item in footer_nav
+								li.footer_nav__item(class!= item.active)
+									a.footer_nav__link(href!= item.link)!= item.title
+					.social.footer_social
+						ul.social__list
+							each item in social
+								li.social__item
+									a.social__link(href=item.link)
+										.social__icon_w
+											+icon(item.icon, 'icon--size_mod')
+						//- .blog_btn.footer_blog
+						//- 	.blog_btn__bg
+						//- 		a.blog_btn__link(href='./blog.html')
+						//- 			span блог
+				+picture({
+					class: 'footer__img_w',
+					class_img: 'footer__img',
+					img: 'images/footer_img.png',
+					alt: 'footer img'
+				})
+		.footer__bottom
+			.footer__copyright © 2022 All rights reserved.

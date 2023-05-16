@@ -1,0 +1,55 @@
+.image_grid {
+
+}
+
+.image_grid__row {
+	display: flex;
+
+	@include bp($point_2, min) {
+		border: 1px solid $black_1;
+	}
+}
+
+.image_grid__col {
+	&:nth-child(1) {
+		max-width: 114rem;
+
+		& .image_grid__img_w {
+			height: 100%;
+
+			@include bp($point_2, min) {
+				border-right: 1px solid $black_1;
+			}
+		}
+	}
+
+	&:nth-child(2) {
+		max-width: 54rem;
+
+		& .image_grid__img_w {
+			height: 50%;
+
+			&:not(:last-child) {
+				border-bottom: 1px solid $black_1;
+			}
+		}
+
+		@include bp($point_3) {
+			display: none;
+		}
+	}
+}
+
+.image_grid__img_w {
+	display: block;
+	width: 100%;
+
+	@include bp($point_2, min) {
+		padding: 2.5rem;
+	}
+}
+
+.image_grid__img {
+	@include cover_img;
+}
+

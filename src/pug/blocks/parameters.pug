@@ -1,0 +1,31 @@
+-
+	list = [
+		'111.703 кв. м полей',
+		'5 тыс. га система подземного капельного орошения',
+		'52 артезианских скважин',
+		'108 установок, транспортных средств и навесного оборудования в эксплуатации',
+		'лабораторный комплекс для научных и сертификационных исследований продукции из технической конопли',
+		'метеостанция',
+		'солнечная электростанция мощностью 1700 КВт',
+		'инновационная платформа IoT',
+	]
+section.section.parameters
+	.section_in
+		+image_grid([
+			{
+				img: ['image_grid_1.jpg']
+			},
+			{
+				img: ['image_grid_2.jpg', 'image_grid_3.jpg']
+			}
+		])
+		.parameters__wrap
+			+picture({
+				class: 'parameters__img_w',
+				class_img: 'parameters__img',
+				img: 'images/param_logo.png',
+				alt: 'parameters logo'
+			})
+			ul.parameters__list
+				each item in list
+					li.parameters__item!= item

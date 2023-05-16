@@ -1,0 +1,11 @@
+mixin img_row(data)
+	section.section.img_row
+		.section_in
+			.img_row__wrap
+				each item in data
+					+picture({
+						class: 'img_row__img_w',
+						class_img: 'img_row__img',
+						img: `images/img-row/${item}`,
+						alt: 'product'
+					})

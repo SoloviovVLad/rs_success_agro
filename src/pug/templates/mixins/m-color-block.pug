@@ -1,0 +1,30 @@
+mixin color_block(data)
+	section.section.color_block
+		.section_in
+			.color_block__wrap
+				+title(data.main_title)
+				if data.img
+					+picture({
+						class: 'color_block__img_w',
+						class_img: 'color_block__img',
+						img: `images/${data.img}`,
+						alt: 'color block img'
+					})
+				if data.title
+					.color_block__title_w
+						.color_block__title_icon
+							+icon('co2', 'icon--size_mod')
+						h3.color_block__title.section_title!= data.title
+				if data.subtitle
+					.color_block__subtitle.section_text!= data.subtitle
+				ul.color_block__list
+					each item in data.items
+						.color_block_item
+							if item.title
+								h3.color_block_item__title.section_title!= item.title
+							if item.descr
+								.color_block_item__descr.section_text!= item.descr
+							if item.list
+								ul.color_block_item__list
+									each li in item.list
+										li.color_block_item__list_item!= li

@@ -1,0 +1,43 @@
+.img_row__wrap {
+	@include bp($point_4, min) {
+		display: flex;
+		border: 1px solid $black_1;
+	}
+}
+
+.img_row__img_w {
+	display: block;
+	height: 100%;
+
+	&:not(:last-child) {
+		@include bp($point_4, min) {
+			border-right: 1px solid $black_1;
+		}
+
+		@include bp($point_4 - 1) {
+			display: none;
+		}
+	}
+
+	@include bp($point_2, min) {
+		padding: 3rem;
+	}
+
+	@include bp($point_3, $point_4) {
+		padding: 1.5rem;
+	}
+
+	@include bp($point_4, min) {
+		width: 33.33%;
+	}
+
+	@include bp($point_4 - 1) {
+		width: 100%;
+	}
+}
+
+.img_row__img {
+	@include cover_img;
+
+	max-height: 32.5rem;
+}

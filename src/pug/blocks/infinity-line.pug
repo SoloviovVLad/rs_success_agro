@@ -1,0 +1,55 @@
+-
+	list = [
+		{
+			img: 'images/logos/prod_3.png'
+		},
+		{
+			img: 'images/logos/prod_2.png'
+		},
+		{
+			img: 'images/logos/prod_1.png'
+		},
+		{
+			img: 'images/logos/prod_3.png'
+		},
+		{
+			img: 'images/logos/prod_2.png'
+		},
+		{
+			img: 'images/logos/prod_1.png'
+		},
+		{
+			img: 'images/logos/prod_3.png'
+		},
+		{
+			img: 'images/logos/prod_2.png'
+		},
+		{
+			img: 'images/logos/prod_1.png'
+		},
+		{
+			img: 'images/logos/prod_3.png'
+		},
+		{
+			img: 'images/logos/prod_2.png'
+		},
+	]
+
+
+section.section.infinity_line
+	.section_in
+		+title('Продукты')
+	if list
+		.infinity_line__wrap
+			-	n = 0;
+			while n < 2
+				-n++
+				ul.infinity_line__list.js-infinity-line
+					each item in list
+						li.infinity_line__item
+							+picture({
+								class: '.infinity_line__img_w',
+								class_img: '.infinity_line__img',
+								img: item.img,
+								alt: 'product logo'
+							})

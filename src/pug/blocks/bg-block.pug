@@ -1,0 +1,25 @@
+section.section.bg_block
+	.section_in
+		+title('Инновации')
+		.bg_block__wrap
+			.bg_block__video_w
+				+picture({
+					class: 'bg_block__img_w',
+					class_img: 'bg_block__img',
+					img: 'images/inovation/inovation_bg.png',
+					alt: 'product img'
+				})
+				video.bg_block__video(src="images/inovation.mov" loop)
+			.bg_block__content
+				.bg_block__title Глобальный биотехнологический индустриальный агрокомплекс RS Success Agro
+				.bg_block__descr Выращивает техническую коноплю на основе внедрения самых уникальных технологий, которые позволяют вывести сельскохозяйственный сектор в Узбекистане на новый инновационный уровень.
+				.bg_block__btn_w
+					+circle_btn({
+						mod: 'circle_btn--white_mod',
+						top_word: 'read',
+						bottom_word: 'more'
+					})
+					+circle_btn({
+						top_word: 'read',
+						bottom_word: 'more'
+					})

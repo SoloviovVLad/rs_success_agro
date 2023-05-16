@@ -1,0 +1,20 @@
+mixin dropdown(data)
+	section.section.dropdown(class= data.mod)
+		.section_in
+			.dropdown__wrap.js-dropdown-wrap
+				.dropdown__title_w.js-trigger-dropdown
+					h3.dropdown__title!= data.title
+					h3.dropdown__icon_w
+						+icon('arrow_bottom', 'icon--size_mod')
+				+picture({
+					class: 'dropdown__img_w',
+					class_img: 'dropdown__img',
+					img: `images/dropdown/${data.img}`,
+					alt: 'dropdown label'
+				})
+				if data.list
+					ul.dropdown__list.js-dropdown-list
+						each item in data.list
+							li.dropdown_item
+								h4.dropdown_item__title.section_subtitle!= item.title
+								.dropdown_item__descr.section_descr!= item.descr
