@@ -5,40 +5,41 @@ section.section.contact
 				.contact__content_in
 					.contact__subtitle.section_subtitle Биотехнологический индустриальный агрокомплекс RS SUCCESS AGRO
 					.contact__descr.section_descr ул. Леодар,МСГ Узбекистан тукинчилиги, Хавастский район, Сырдарьинская область, Республика Узбекистан
-			form(action="#")
-				div
-					p
-						label(for="input_name") Name
-							br
-							input(id="input_name" type="text" placeholder="Name")
-							br
-					p
-						label(for="input_phone") Phone
-							br
-							input(id="input_name" type="text" placeholder="Phone")
-							br
-					p
-						label(for="input_name") E-mail
-							br
-							input(id="input_name" type="email" placeholder="E-mail")
-							br
-				div
-					p
-						label(for="input_message") Message
-							br
-							textarea(id="input_message" placeholder="Message")
-							br
-					.form_submit
+			.wpcf7
+				form(action="#")
+					div
 						p
-							button(type="submit")
-							.circle_btn
-								.circle_btn__in
-									p
-										span
-									.circle_btn__icon_w
-										.circle_btn__icon
-											p
-												+icon('arrow_btn_next', 'icon--size_mod')
-									p
-										span
+							label(for="input_name") Name
+								br
+								input(id="input_name" type="text" placeholder="Name" required)
+								br
+						p
+							label(for="input_phone") Phone
+								br
+								input(id="input_name" type="text" placeholder="Phone")
+								br
+						p
+							label(for="input_name") E-mail
+								br
+								input(id="input_name" type="email" placeholder="E-mail")
+								br
+					div
+						p
+							label(for="input_message") Message
+								br
+								textarea(id="input_message" placeholder="Message")
+								br
+						.form__btn_submit
+							p
+								button(type="submit")
+								.circle_btn
+									.circle_btn__in
+										p
+											span
+										.circle_btn__icon_w
+											.circle_btn__icon
+												p
+													+icon('arrow_btn_next', 'icon--size_mod')
+										p
+											span
 
